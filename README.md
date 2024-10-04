@@ -32,11 +32,15 @@ Naively fitting a minimum jerk path to the waypoints from the piecewise linear A
     - Within the `cylinders` field is an array of cylindrical obstacles. 
     - Each obtacle has the attributes `x`, `y`, `radius` and `height`. By iterating through each element in the array, a visualization of the obstacle map can be reconstructed.
     - All units in meters.
-3. `map0_a_star_raw.json`: JSON file containing raw A* path 
+3. `path0_a_star_processed.json`: JSON file containing raw A* path 
     - Within the `a_star_path` field is an array of a_star points
         - `point` field: Contains (x,y,z) array
         - `time` field: Optional to use the time allocation given here, which assumes constant velocity between each 3D grid cell.
     - All units in meters.
-4. `map0_a_star_processed.json`: JSON file containing piecewise linear A* path
+4. `path0_a_star_processed.json`: JSON file containing piecewise linear A* path
     - This path has been processed from the continuous A* path to obtain a piecewise linear path using a simple line of sight check. Resulting in fewer waypoints.
     - All units in meters.
+
+
+## Additional test cases
+There is an addition test case named `path1` with a similar naming convention to the files explained previously.
